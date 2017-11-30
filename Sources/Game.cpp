@@ -1,27 +1,8 @@
 #include "Game.hpp"
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-// TODO: 砲台の位置を画面左に、ターゲットの位置を画面右に移動させる。(A)
-// TODO: 雲の位置を左から右に動かす。見えなくなったら左端に戻す。(B)
-<<<<<<< HEAD
-// TODO: 砲台を青い壁に沿って上下に動かす。(C) //kurotsu
-// TODO: 弾のスピードを速くし、弾が画面右端を通り越したら再度発射可能にする。(D)
-=======
-// TODO: 砲台を青い壁に沿って上下に動かす。(C)
-// TODO: 弾のスピードを速くし、弾が画面右端を通り越したら再度発射可能にする。(D)　HW16A207 森本義基
->>>>>>> f17ee68a940c43fbcfa1986677931655dcc8b71f
-// TODO: スコアのサイズを大きくする。(E)
-// TODO: スコアを100点ずつ加算するようにし、5桁の表示に変える。(F)
-<<<<<<< HEAD
-// TODO: PlayBGM()関数を使って、BGMを再生する。(G) //kurotsu
-// TODO: PlaySE()関数を使って、弾の発射時とターゲットに当たった時にSEを再生する。(H)
-=======
->>>>>>> bf618ab065e4e358ef330aa1be49b3c061d22d22
+
+
 // TODO: 砲台の位置を画面左に、ターゲットの位置を画面右に移動させる。(A)(実装:HW16A097 新甚 礁太)
 // TODO: 雲の位置を左から右に動かす。見えなくなったら左端に戻す。(B)(実装:HW16A209 谷津 峻哉)
 // TODO: 砲台を青い壁に沿って上下に動かす。(C)(実装:HW16A072 黒津 勇斗)
@@ -30,36 +11,6 @@
 // TODO: スコアを100点ずつ加算するようにし、5桁の表示に変える。(F)(実装:HW16A209 谷津 峻哉)
 // TODO: PlayBGM()関数を使って、BGMを再生する。(G)(実装:HW16A072 黒津 勇斗)
 // TODO: PlaySE()関数を使って、弾の発射時とターゲットに当たった時にSEを再生する。(H)(実装:HW16A207 森本 義基)
-<<<<<<< HEAD
-=======
->>>>>>> 9b816627f8d442cef882bd92fbdeb1242d2d521f
->>>>>>> bf618ab065e4e358ef330aa1be49b3c061d22d22
-
-=======
-// TODO: 砲台の位置を画面左に、ターゲットの位置を画面右に移動させる。(A)(実装:HW16A097 新甚　礁太)
-// TODO: 雲の位置を左から右に動かす。見えなくなったら左端に戻す。(B)(実装:HW16A209 谷津　峻哉)
-// TODO: 砲台を青い壁に沿って上下に動かす。(C)(実装:HW16A078 黒津　勇斗)
-// TODO: 弾のスピードを速くし、弾が画面右端を通り越したら再度発射可能にする。(D)(実装:HW16A207 森本　義基)
-// TODO: スコアのサイズを大きくする。(E)(実装:HW16A097 新甚　礁太)
-// TODO: スコアを100点ずつ加算するようにし、5桁の表示に変える。(F)(実装:HW16A209 谷津　峻哉)
-// TODO: PlayBGM()関数を使って、BGMを再生する。(G)(実装:HW16A078 黒津　勇斗)
-// TODO: PlaySE()関数を使って、弾の発射時とターゲットに当たった時にSEを再生する。(H)(実装:HW16A207 森本　義基)
->>>>>>> feature/e_big_score_size
-=======
-// TODO: PlayBGM()関数を使って、BGMを再生する。(G)
-// TODO: PlaySE()関数を使って、弾の発射時とターゲットに当たった時にSEを再生する。(H) HW16A207 森本義基
-=======
-// TODO: 砲台の位置を画面左に、ターゲットの位置を画面右に移動させる。(A)実装:新甚
-// TODO: 雲の位置を左から右に動かす。見えなくなったら左端に戻す。(B)実装:谷津
-// TODO: 砲台を青い壁に沿って上下に動かす。(C)実装:黒津
-// TODO: 弾のスピードを速くし、弾が画面右端を通り越したら再度発射可能にする。(D)実装:森本
-// TODO: スコアのサイズを大きくする。(E)実装:新甚
-// TODO: スコアを100点ずつ加算するようにし、5桁の表示に変える。(F)実装:谷津
-// TODO: PlayBGM()関数を使って、BGMを再生する。(G)実装:黒津
-// TODO: PlaySE()関数を使って、弾の発射時とターゲットに当たった時にSEを再生する。(H)実装:森本
->>>>>>> feature/a_target_pos
-
->>>>>>> ea0e2150c9f92a20a095a2b8511c3cf292d979fd
 
 Vector2 cloudPos;       //!< 雲の位置
 Vector2 cannonPos;      //!< 砲台の位置
@@ -85,7 +36,6 @@ void Start()
 // 1/60秒ごとに呼ばれる関数です。モデルの更新と画面の描画を行います。
 void Update()
 {
-<<<<<<< HEAD
     //雲の位置を左から右に動かす。見えなくなったら左端に戻す
     if (cloudPos.x > -550) {
         cloudPos.x += 60 * Time::deltaTime;
@@ -93,8 +43,7 @@ void Update()
             cloudPos.x = -540;
         }
     }
-=======
->>>>>>> bf618ab065e4e358ef330aa1be49b3c061d22d22
+    
     
     // 弾の発射
     if (bulletPos.x <= -999 && Input::GetKeyDown(KeyMask::Space)) {
@@ -104,22 +53,13 @@ void Update()
 
     // 弾の移動
     if (bulletPos.x > -999) {
-<<<<<<< HEAD
-        bulletPos.x += 10 * Time::deltaTime;
-        
-=======
         bulletPos.x += 200 * Time::deltaTime;
->>>>>>> f17ee68a940c43fbcfa1986677931655dcc8b71f
 
         // ターゲットと弾の当たり判定
         Rect bulletRect(bulletPos, Vector2(32, 20));
         if (targetRect.Overlaps(bulletRect)) {
-<<<<<<< HEAD
             score += 100;         // スコアの加算
-=======
             PlaySound("se_maoudamashii_explosion06.mp3");
-            score += 1;         // スコアの加算
->>>>>>> ea0e2150c9f92a20a095a2b8511c3cf292d979fd
             bulletPos.x = -999; // 弾を発射可能な状態に戻す
         }
         if(bulletPos.x > 320){
@@ -127,7 +67,6 @@ void Update()
         }
     }
     
-<<<<<<< HEAD
     if (cannonPos.y < -149){
         ca=0;
     }
@@ -139,8 +78,6 @@ void Update()
     } else if (ca == 1){
         cannonPos.y -= 50 * Time::deltaTime;
     } // 56~66 追加文
-=======
->>>>>>> f17ee68a940c43fbcfa1986677931655dcc8b71f
 
     // 背景の描画
     Clear(Color::cyan);
@@ -162,15 +99,10 @@ void Update()
     FillRect(targetRect, Color::red);
 
     // スコアの描画
-<<<<<<< HEAD
-    SetFont("nicoca_v1.ttf", 20.0f);
-    DrawText(FormatString("%05d", score), Vector2(-319, 199), Color::black);
-    DrawText(FormatString("%05d", score), Vector2(-320, 200), Color::white);
-=======
     //スコアのサイズを大きくする。(E)(実装:HW16A097 新甚　礁太)
     SetFont("nicoca_v1.ttf", 60.0f);
-    DrawText(FormatString("%02d", score), Vector2(-319, 199), Color::black);
-    DrawText(FormatString("%02d", score), Vector2(-320, 200), Color::white);
->>>>>>> feature/e_big_score_size
+    DrawText(FormatString("%05d", score), Vector2(-319, 199), Color::black);
+    DrawText(FormatString("%05d", score), Vector2(-320, 200), Color::white);
+
 }
 
