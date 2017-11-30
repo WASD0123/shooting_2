@@ -11,6 +11,7 @@
 // TODO: 弾のスピードを速くし、弾が画面右端を通り越したら再度発射可能にする。(D)
 // TODO: スコアのサイズを大きくする。(E)
 // TODO: スコアを100点ずつ加算するようにし、5桁の表示に変える。(F)
+<<<<<<< HEAD
 // TODO: PlayBGM()関数を使って、BGMを再生する。(G) //kurotsu
 // TODO: PlaySE()関数を使って、弾の発射時とターゲットに当たった時にSEを再生する。(H)
 =======
@@ -38,6 +39,11 @@
 // TODO: PlayBGM()関数を使って、BGMを再生する。(G)(実装:HW16A078 黒津　勇斗)
 // TODO: PlaySE()関数を使って、弾の発射時とターゲットに当たった時にSEを再生する。(H)(実装:HW16A207 森本　義基)
 >>>>>>> feature/e_big_score_size
+=======
+// TODO: PlayBGM()関数を使って、BGMを再生する。(G)
+// TODO: PlaySE()関数を使って、弾の発射時とターゲットに当たった時にSEを再生する。(H) HW16A207 森本義基
+
+>>>>>>> ea0e2150c9f92a20a095a2b8511c3cf292d979fd
 
 Vector2 cloudPos;       //!< 雲の位置
 Vector2 cannonPos;      //!< 砲台の位置
@@ -76,6 +82,7 @@ void Update()
     
     // 弾の発射
     if (bulletPos.x <= -999 && Input::GetKeyDown(KeyMask::Space)) {
+        PlaySound("se_maoudamashii_explosion03.mp3");
         bulletPos = cannonPos + Vector2(50, 10);
     }
 
@@ -87,7 +94,12 @@ void Update()
         // ターゲットと弾の当たり判定
         Rect bulletRect(bulletPos, Vector2(32, 20));
         if (targetRect.Overlaps(bulletRect)) {
+<<<<<<< HEAD
             score += 100;         // スコアの加算
+=======
+            PlaySound("se_maoudamashii_explosion06.mp3");
+            score += 1;         // スコアの加算
+>>>>>>> ea0e2150c9f92a20a095a2b8511c3cf292d979fd
             bulletPos.x = -999; // 弾を発射可能な状態に戻す
         }
     }
