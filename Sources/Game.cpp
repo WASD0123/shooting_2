@@ -7,8 +7,13 @@
 <<<<<<< HEAD
 // TODO: 砲台の位置を画面左に、ターゲットの位置を画面右に移動させる。(A)
 // TODO: 雲の位置を左から右に動かす。見えなくなったら左端に戻す。(B)
+<<<<<<< HEAD
 // TODO: 砲台を青い壁に沿って上下に動かす。(C) //kurotsu
 // TODO: 弾のスピードを速くし、弾が画面右端を通り越したら再度発射可能にする。(D)
+=======
+// TODO: 砲台を青い壁に沿って上下に動かす。(C)
+// TODO: 弾のスピードを速くし、弾が画面右端を通り越したら再度発射可能にする。(D)　HW16A207 森本義基
+>>>>>>> f17ee68a940c43fbcfa1986677931655dcc8b71f
 // TODO: スコアのサイズを大きくする。(E)
 // TODO: スコアを100点ずつ加算するようにし、5桁の表示に変える。(F)
 <<<<<<< HEAD
@@ -88,8 +93,12 @@ void Update()
 
     // 弾の移動
     if (bulletPos.x > -999) {
+<<<<<<< HEAD
         bulletPos.x += 10 * Time::deltaTime;
         
+=======
+        bulletPos.x += 200 * Time::deltaTime;
+>>>>>>> f17ee68a940c43fbcfa1986677931655dcc8b71f
 
         // ターゲットと弾の当たり判定
         Rect bulletRect(bulletPos, Vector2(32, 20));
@@ -102,8 +111,12 @@ void Update()
 >>>>>>> ea0e2150c9f92a20a095a2b8511c3cf292d979fd
             bulletPos.x = -999; // 弾を発射可能な状態に戻す
         }
+        if(bulletPos.x > 320){
+            bulletPos.x = -999;
+        }
     }
     
+<<<<<<< HEAD
     if (cannonPos.y < -149){
         ca=0;
     }
@@ -115,6 +128,8 @@ void Update()
     } else if (ca == 1){
         cannonPos.y -= 50 * Time::deltaTime;
     } // 56~66 追加文
+=======
+>>>>>>> f17ee68a940c43fbcfa1986677931655dcc8b71f
 
     // 背景の描画
     Clear(Color::cyan);
